@@ -12,6 +12,15 @@
 		{
 			$query =$this->db->insert('var_station',$data);
 		}
+	
+	function station_tabel()
+    		{
+				#memanggil nilai dari tabel 'var_station'
+       			$query = $this->db->get('var_station');
+				return $query->result();
+			}
+		
+		
 	#input data dari form unit	
 	function add_unit($data)
 		{

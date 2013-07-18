@@ -10,7 +10,7 @@
 		</div>
 		
 		<!-- Main Navigation Start -->
-		<div class="twelve columns">
+		
 			<div id="navigation">
 				<ul id="nav">
 					<li>					

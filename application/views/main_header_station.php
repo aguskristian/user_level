@@ -6,7 +6,7 @@
 	
 		<!-- Logo -->
 		<div class="six columns">
-		<div><h4>Registration User Level<h4></div>
+		<div><h3>Tabel Station<h3></div>
 		</div>
 		
 		<!-- Main Navigation Start -->
