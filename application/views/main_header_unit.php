@@ -6,7 +6,7 @@
 	
 		<!-- Logo -->
 		<div class="six columns">
-		<div><h2>Tabel Station<h2></div>
+		<div><h2>Tabel Unit<h2></div>
 		</div>
 		
 		<!-- Main Navigation Start -->
@@ -17,7 +17,7 @@
 						<a href="<?php echo base_url ()?>index.php/homepage" class="current">Home</a>
 					</li>
 					
-					<li class="dropdown">
+				<li class="dropdown">
 						<a href="<?php echo base_url ()?>index.php/form_station" class="current">Form</a>
 						<ul class="dropdown-menu">
 						   <li><a tabindex="-1" href="<?php echo base_url ()?>index.php/station/add_station">Form Station</a></li>

@@ -1,6 +1,6 @@
 <?php
 
-	class Form_position extends CI_Controller 
+	class Position extends CI_Controller 
 	{
 		private $data;
 			
@@ -11,7 +11,7 @@
 				$this->load->model('user_level');
 			}
 				
-		function index()
+		function add_position()
 		{
 		
 			if ( $this->input->post('submit') ) {
@@ -25,7 +25,16 @@
 						);
 			$this->user_level->add_position( $data );
 			}
-			$this->load->view('form/form_position');
+			$this->load->view('position/form_position');
+		}
+		
+		function tabel_position(){
+		
+			$data['records'] = $this->user_level->position_tabel();
+					
+			#menampilkan tabel station
+			$this->load->view('position/tabel_position',$data);	
+		
 		}
 		
 		

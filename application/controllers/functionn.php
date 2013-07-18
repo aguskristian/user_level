@@ -1,6 +1,6 @@
 <?php
 
-	class Form_function extends CI_Controller 
+	class Functionn extends CI_Controller 
 	{
 		private $data;
 			
@@ -11,7 +11,7 @@
 				$this->load->model('user_level');
 			}
 				
-		function index()
+		function add_function()
 		{
 		
 			if ( $this->input->post('submit') ) {
@@ -23,7 +23,16 @@
 						);
 			$this->user_level->add_function( $data );
 			}
-			$this->load->view('form/form_function');
+			$this->load->view('functionn/form_function');
+		}
+		
+		function tabel_function(){
+		
+			$data['records'] = $this->user_level->function_tabel();
+					
+			#menampilkan tabel station
+			$this->load->view('function/tabel_function',$data);	
+		
 		}
 		
 		

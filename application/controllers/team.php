@@ -1,6 +1,6 @@
 <?php
 
-	class Form_team extends CI_Controller 
+	class Team extends CI_Controller 
 	{
 		private $data;
 			
@@ -11,7 +11,7 @@
 				$this->load->model('user_level');
 			}
 				
-		function index()
+		function add_team()
 		{
 		
 			if ( $this->input->post('submit') ) {
@@ -24,7 +24,16 @@
 						);
 			$this->user_level->add_team( $data );
 			}
-			$this->load->view('form/form_team');
+			$this->load->view('team/form_team');
+		}
+		
+		function tabel_team(){
+		
+			$data['records'] = $this->user_level->team_tabel();
+					
+			#menampilkan tabel station
+			$this->load->view('team/tabel_team',$data);	
+		
 		}
 		
 		

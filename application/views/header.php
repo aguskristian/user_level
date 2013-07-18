@@ -3,7 +3,7 @@
 <!-- Basic Page Needs
  ================================================== -->
 <meta charset="utf-8">
-<title>USer Level Managemant Level</title>
+<title>User Level Managemant Level</title>
 
 <!-- Mobile Specific
  ================================================== -->

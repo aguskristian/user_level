@@ -1,6 +1,6 @@
 <?php
 
-	class Form_unit extends CI_Controller 
+	class Unit extends CI_Controller 
 	{
 		private $data;
 			
@@ -11,7 +11,7 @@
 				$this->load->model('user_level');
 			}
 				
-		function index()
+		function add_unit()
 		{
 		
 			if ( $this->input->post('submit') ) {
@@ -24,7 +24,16 @@
 						);
 			$this->user_level->add_unit( $data );
 			}
-			$this->load->view('form/form_unit');
+			$this->load->view('unit/form_unit');
+		}
+		
+		function tabel_unit(){
+		
+			$data['records'] = $this->user_level->unit_tabel();
+					
+			#menampilkan tabel station
+			$this->load->view('unit/tabel_unit',$data);	
+		
 		}
 		
 		
