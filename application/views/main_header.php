@@ -10,8 +10,8 @@
 		</div>
 		
 		<!-- Main Navigation Start -->
-		<div class="twelve columns">
-			<div id="navigation">
+		<div class="navbar navbar-inverse"">
+			<div id = navigation >
 				<ul id="nav">
 					<li>					
 						<a href="<?php echo base_url ()?>index.php/homepage" class="current">Home</a>
@@ -44,6 +44,7 @@
 					<a href="<?php echo base_url ()?>index.php/login" class="current">Log In</a>
 					</li>
 				</ul>
+				</div>
 			</div>
 		</div>
 		<!-- Main Navigation End -->

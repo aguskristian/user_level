@@ -8,7 +8,7 @@
 			$this->load->database();
 	}
 	#input data dari form station
-	function add_station($data)
+	function input_station($data)
 		{
 			$query =$this->db->insert('var_station',$data);
 		}

@@ -24,7 +24,7 @@
 						'vs_level'          => $this->input->post('vs_level')
 						);
 			#fungsi input data yang ada dalam model user level
-			$this->user_levels->add_station( $data );
+			$this->user_level->input_station( $data );
 			}
 			#menampilkan form inputan station
 			$this->load->view('station/form_station');
