@@ -19,6 +19,18 @@
        			$query = $this->db->get('var_station');
 				return $query->result();
 			}
+			
+	function delete_station($id)
+			{
+        		#menghapus nilai berdasarkan id
+				$this->db->delete('var_station', array('vs_code'=>$id));
+    		}
+		
+	function edit_station($id)
+			{
+				$query = $this->db->get_where('var_station',array('vs_code'=>$id));
+				return $query->row_array();
+			}
 		
 		
 	#input data dari form unit	

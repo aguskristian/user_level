@@ -31,7 +31,7 @@
 			$data['records'] = $this->user_level->function_tabel();
 					
 			#menampilkan tabel station
-			$this->load->view('function/tabel_function',$data);	
+			$this->load->view('functionn/tabel_function',$data);	
 		
 		}
 		

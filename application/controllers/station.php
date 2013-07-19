@@ -2,7 +2,6 @@
 
 	class Station extends CI_Controller 
 	{
-		private $data;
 			
 		function __construct()
     		{
@@ -30,8 +29,8 @@
 			$this->load->view('station/form_station');
 		}
 		
-		function tabel_station(){
-		
+		function tabel_station()
+		{
 			$data['records'] = $this->user_level->station_tabel();
 					
 			#menampilkan tabel station
@@ -39,5 +38,33 @@
 		
 		}
 		
+		function edit($id)
+		{
+			$query = $this->user_level->edit_station($id);
+					 $data['fvs_code']    = $query ['vs_code'];
+					 $data['fvs_name']    = $query ['vs_name'];
+		 			 $data['fvs_level']   = $query ['vs_level'];
+		
+			$this->load->view('station/edit_station',$data);
+		}
+		
+		function submit()
+    	{
+					#menyimpan nilai input di file sementara dan menyimpan ke field database
+                    $vs_code               = $this->input->post('vs_code');
+					$vs_name               = $this->input->post('vs_name');
+					$vs_level              = $this->input->post('vs_level');
+					
+					$data = array(
+					'vs_code'                =>$vs_code,
+					'vs_name'                =>$vs_name,
+					'vs_level'               =>$vs_station);
+					
+					$this->db->where('vs_code',$vs_code);
+					$this->db->update('var_station',$data);
+					
+				 	#script mengarahkan ke tabel_asset
+					redirect('station/tabel_station');
+		}
 	}
 ?>
