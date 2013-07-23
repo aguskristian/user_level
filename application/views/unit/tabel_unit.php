@@ -26,19 +26,14 @@
                         <td> <?php echo $key->vu_name; ?> </td>
                         <td> <?php echo $key->vu_vs_code; ?> </td>
 						<td> <?php echo $key->vu_level; ?> </td>	
-						<td>
+					<td>
 
-						<a href="<?php echo base_url().'index.php/form_station/edit_unit/' . $key->vu_code ?>">'Edit'</a>
-						
-						<a href="<?php echo base_url().'index.php/form_station/delete_unit/' . $key->vu_code ?>">'Delete'</a>
-                        
-						<?php #echo anchor('controllersinventory/edit_inventory/' . $key->id_wo_pmi, 'Edit'); ?>
-                        
-						<?php #echo anchor('controllersinventory/delete_inventory/' . $key->id_wo_pmi, 'Delete'); ?>
-						
-						</td>
+						<a href="<?php echo base_url().'index.php/unit/edit/' . $key->vu_code ?>">Edit</a>
+						&nbsp;|&nbsp;
+						<a href="<?php echo base_url().'index.php/unit/delete/' . $key->vu_code ?>">Delete</a>
+					</td>
                     
-					</tr>
+				</tr>
          
           
                 <?php endforeach; ?>

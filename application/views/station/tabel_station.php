@@ -27,17 +27,12 @@
 							
 						<td>
 
-						<a href="<?php echo base_url().'index.php/form_station/edit_station/' . $key->vs_code ?>"><alt="Edit"></a>
-						
-						<a href="<?php echo base_url().'index.php/form_station/delete_station/' . $key->vs_code ?>"><alt="Delete"></a>
-                        
-						<?php #echo anchor('controllersinventory/edit_inventory/' . $key->id_wo_pmi, 'Edit'); ?>
-                        
-						<?php #echo anchor('controllersinventory/delete_inventory/' . $key->id_wo_pmi, 'Delete'); ?>
-						
+						<a href="<?php echo base_url().'index.php/station/edit/' . $key->vs_code ?>">Edit</a>
+						&nbsp;|&nbsp;
+						<a href="<?php echo base_url().'index.php/station/delete/' . $key->vs_code ?>">Delete</a>
 						</td>
                     
-					</tr>
+				</tr>
          
           
                 <?php endforeach; ?>

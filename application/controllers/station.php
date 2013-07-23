@@ -58,7 +58,7 @@
 					$data = array(
 					'vs_code'                =>$vs_code,
 					'vs_name'                =>$vs_name,
-					'vs_level'               =>$vs_station);
+					'vs_level'               =>$vs_level);
 					
 					$this->db->where('vs_code',$vs_code);
 					$this->db->update('var_station',$data);

@@ -45,6 +45,19 @@
        			$query = $this->db->get('var_unit');
 				return $query->result();
 			}	
+			
+	function delete_unit($id)
+			{
+        		#menghapus nilai berdasarkan id
+				$this->db->delete('var_unit', array('vu_code'=>$id));
+    		}
+		
+	function edit_unit($id)
+			{
+				$query = $this->db->get_where('var_unit',array('vu_code'=>$id));
+				return $query->row_array();
+			}
+			
 	#input data dari form sub unit	
 	function add_sub_unit($data)
 		{
@@ -56,7 +69,19 @@
 				#memanggil nilai dari tabel 'var_station'
        			$query = $this->db->get('var_sub_unit');
 				return $query->result();
-			}	
+			}
+				
+	function delete_sub_unit($id)
+			{
+        		#menghapus nilai berdasarkan id
+				$this->db->delete('var_sub_unit', array('vs_code'=>$id));
+    		}
+		
+	function edit_sub_unit($id)
+			{
+				$query = $this->db->get_where('var_sub_unit',array('vsu_code'=>$id));
+				return $query->row_array();
+			}
 		
 	#input data dari form team	
 	function add_team($data)
