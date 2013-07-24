@@ -4,6 +4,29 @@
 			
 			<?php $this->load->view('header');	?>
 			<?php $this->load->view('main_header_function');?>
+			<div>
+			<strong>
+			
+				<?php 
+				
+					$search = $this->input->post( 'search' );
+					
+					echo $search ? "Menampilkan data pencarian '$search'" : 'Pencarian Data';
+					
+				?>
+				
+			</strong>
+			</div>
+     
+                <form action="<?php echo site_url() ?>/station/tabel_station" method="post" class="navbar-search pull-left">
+					
+					<input type="search" name="search" class="input-medium search-query" placeholder="search" value="<?php echo $this->input->post( 'search' ) ?>" />
+					
+					
+					<button class="btn" type="button">Search</button>
+				
+                </form>
+				
 			<br></br>
     		<table align="center" border="1" cellpadding="0" cellspacing="0" style="font-size:12px" class="table table-bordered">
 

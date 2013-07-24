@@ -5,12 +5,12 @@
 	<div class="container ie-dropdown-fix">
 	
 		<!-- Logo -->
-		<div class="six">
+		<div class="columns">
 		<div><h2>Tabel Station<h2></div>
 		</div>
 		
 		<!-- Main Navigation Start -->
-		<div class="twelve">
+		<div class="">
 			<div id="navigation">
 				<ul id="nav">
 					<li>					

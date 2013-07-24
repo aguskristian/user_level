@@ -5,7 +5,7 @@
 	<div class="container ie-dropdown-fix">
 	
 		<!-- Logo -->
-		<div class="">
+		<div class="columns">
 		<div><h2>Tabel Function<h2></div>
 		</div>
 		
@@ -16,7 +16,6 @@
 					<li>					
 						<a href="<?php echo base_url ()?>index.php/homepage" class="current">Home</a>
 					</li>
-					
 					<li class="dropdown">
 						<a href="<?php echo base_url ()?>index.php/form_station" class="current">Form</a>
 						<ul class="dropdown-menu">
