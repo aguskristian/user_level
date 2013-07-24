@@ -18,7 +18,7 @@
 			</strong>
 			</div>
      
-                <form action="<?php echo site_url() ?>/station/tabel_station" method="post" class="navbar-search pull-left">
+                <form action="<?php echo site_url() ?>/unit/tabel_unit" method="post" class="navbar-search pull-left">
 					
 					<input type="search" name="search" class="input-medium search-query" placeholder="search" value="<?php echo $this->input->post( 'search' ) ?>" />
 					

@@ -34,6 +34,18 @@
 				$query = $this->db->get_where('var_station',array('vs_code'=>$id));
 				return $query->row_array();
 			}
+	 function search_station($qword)
+        {
+            #melakukan proses searching berdasarkan field database 
+            //$query = $this->input->POST ('search');
+			$this->db->select('*');
+			$this->db->from('var_station');
+            $this->db->like ('vs_code', $qword);
+            $this->db->or_like('vs_name', $qword);
+			$this->db->or_like('vs_level', $qword);
+         
+            return $this->db->get()->result(); 
+        }
 		
 	#---------------------------------------------------------
 	#						 UNIT						     -
