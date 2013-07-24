@@ -20,7 +20,9 @@
     		{
 				#memanggil nilai dari tabel 'var_station'
        			$query = $this->db->get('var_station');
-				return $query->result();
+				if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_station( $this->input->post( 'search' ));
+				
+return $query->result();
 			}
 			
 	function delete_station($id)
@@ -75,6 +77,20 @@
 				return $query->row_array();
 			}
 			
+	 function search_unit($qword)
+        {
+            #melakukan proses searching berdasarkan field database 
+            //$query = $this->input->POST ('search');
+			$this->db->select('*');
+			$this->db->from('var_unit');
+            $this->db->like ('vu_code', $qword);
+            $this->db->or_like('vu_name', $qword);
+			$this->db->or_like('vu_vs_code', $qword);
+			$this->db->or_like('vu_level', $qword);
+         
+            return $this->db->get()->result(); 
+        }
+			
 	#---------------------------------------------------------
 	#							SUB UNIT				     -
 	#---------------------------------------------------------
@@ -102,6 +118,20 @@
 				$query = $this->db->get_where('var_sub_unit',array('vsu_code'=>$id));
 				return $query->row_array();
 			}
+			
+	function search_sub_unit($qword)
+        {
+            #melakukan proses searching berdasarkan field database 
+            //$query = $this->input->POST ('search');
+			$this->db->select('*');
+			$this->db->from('var_sub_unit');
+            $this->db->like ('vsu_code', $qword);
+            $this->db->or_like('vsu_name', $qword);
+			$this->db->or_like('vsu_vu_code', $qword);
+			$this->db->or_like('vsu_level', $qword);
+         
+            return $this->db->get()->result(); 
+        }
 			
 	#---------------------------------------------------------
 	#							TEAM					     -
@@ -131,6 +161,20 @@
 				return $query->row_array();
 			}
 			
+	function search_team($qword)
+        {
+            #melakukan proses searching berdasarkan field database 
+            //$query = $this->input->POST ('search');
+			$this->db->select('*');
+			$this->db->from('var_team');
+            $this->db->like ('vt_code', $qword);
+            $this->db->or_like('vt_name', $qword);
+			$this->db->or_like('vt_vsu_code', $qword);
+			$this->db->or_like('vt_level', $qword);
+         
+            return $this->db->get()->result(); 
+        }
+			
 	#---------------------------------------------------------
 	#							FUNCTION				     -
 	#---------------------------------------------------------
@@ -159,6 +203,21 @@
 				return $query->row_array();
 			}
 			
+	function search_function($qword)
+        {
+            #melakukan proses searching berdasarkan field database 
+            //$query = $this->input->POST ('search');
+			$this->db->select('*');
+			$this->db->from('var_function');
+            $this->db->like ('vf_code', $qword);
+            $this->db->or_like('vf_name', $qword);
+			$this->db->or_like('vf_level', $qword);
+			
+         
+            return $this->db->get()->result(); 
+        }
+			
+			
 	#---------------------------------------------------------
 	#							POSITION				     -
 	#---------------------------------------------------------		
@@ -185,5 +244,21 @@
 				$query = $this->db->get_where('var_position',array('vp_code'=>$id));
 				return $query->row_array();
 			}
+	function search_position($qword)
+        {
+            #melakukan proses searching berdasarkan field database 
+            //$query = $this->input->POST ('search');
+			$this->db->select('*');
+			$this->db->from('var_position');
+            $this->db->like ('vp_code', $qword);
+            $this->db->or_like('vp_name', $qword);
+			$this->db->or_like('vp_vt_code', $qword);
+			$this->db->or_like('vp_vf_code', $qword);
+			$this->db->or_like('vp_level', $qword);
+			
+         
+            return $this->db->get()->result(); 
+        }
+			
 	
 	}

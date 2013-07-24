@@ -29,6 +29,8 @@
 		function tabel_sub_unit(){
 		
 			$data['records'] = $this->user_level->sub_unit_tabel();
+			
+			if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_sub_unit( $this->input->post( 'search' ));		
 					
 			#menampilkan tabel station
 			$this->load->view('sub_unit/tabel_sub_unit',$data);	

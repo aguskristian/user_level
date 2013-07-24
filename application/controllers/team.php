@@ -30,7 +30,7 @@
 		function tabel_team(){
 		
 			$data['records'] = $this->user_level->team_tabel();
-					
+			if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_team( $this->input->post( 'search' ));		
 			#menampilkan tabel team
 			$this->load->view('team/tabel_team',$data);	
 		

@@ -34,7 +34,7 @@
 		{
 		
 			$data['records'] = $this->user_level->position_tabel();
-					
+			if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_position( $this->input->post( 'search' ));		
 			#menampilkan tabel station
 			$this->load->view('position/tabel_position',$data);	
 			

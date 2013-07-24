@@ -29,7 +29,7 @@
 		function tabel_function(){
 		
 			$data['records'] = $this->user_level->function_tabel();
-					
+			if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_function( $this->input->post( 'search' ));		
 			#menampilkan tabel station
 			$this->load->view('functionn/tabel_function',$data);	
 		

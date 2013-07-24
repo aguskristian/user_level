@@ -30,7 +30,7 @@
 		function tabel_unit(){
 		
 			$data['records'] = $this->user_level->unit_tabel();
-					
+			if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_unit( $this->input->post( 'search' ));		
 			#menampilkan tabel station
 			$this->load->view('unit/tabel_unit',$data);	
 		

@@ -35,8 +35,6 @@
 			$data['records'] = $this->user_level->station_tabel();
 					
 			#menampilkan tabel station
-			
-			
 			if ( $this->input->post( 'search' ) ) $data['records'] = $this->user_level->search_station( $this->input->post( 'search' ));
 			#memanggil view 'tabel_station'
 			$this->load->view('station/tabel_station',$data);
