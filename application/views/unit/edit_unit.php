@@ -4,8 +4,8 @@
 		
 			<?php $this->load->view('header');	?>
 			<?php $this->load->view('main_header_unit');?>
-			<br></br>
 			
+			<?php echo form_open_multipart('unit/submit'); ?>
 			<?php echo form_hidden('vu_code',$fvu_code); ?>
     		
 			<tr>
@@ -27,6 +27,12 @@
 				<td> <strong><?php echo form_label('Unit Level'); ?></strong></td>
 				<td> <?php echo form_input('vu_level',$fvu_level,'id="vu_level" '); ?></td>
 			</tr>
+			<br></br>
+			 
+			 <tr>
+				<td> <?php echo form_submit('update','Update','id="submit"'); echo form_close(); ?> </td>
+			 </tr>
+			 
 
 
 		

@@ -31,13 +31,9 @@
 							
 						<td>
 
-						<a href="<?php echo base_url().'index.php/form_position/edit_position/' . $key->vp_code ?>"><alt="Edit"></a>
-						
-						<a href="<?php echo base_url().'index.php/form_position/delete_position/' . $key->vp_code ?>"><alt="Delete"></a>
-                        
-						<?php #echo anchor('controllersinventory/edit_inventory/' . $key->id_wo_pmi, 'Edit'); ?>
-                        
-						<?php #echo anchor('controllersinventory/delete_inventory/' . $key->id_wo_pmi, 'Delete'); ?>
+						<a href="<?php echo base_url().'index.php/position/edit/' . $key->vp_code ?>">Edit</a>
+						&nbsp;|&nbsp;
+						<a href="<?php echo base_url().'index.php/position/delete/' . $key->vp_code ?>">Delete</a>
 						
 						</td>
                     

@@ -5,7 +5,7 @@
 	<div class="container ie-dropdown-fix">
 	
 		<!-- Logo -->
-		<div class="six columns">
+		<div class="">
 		<div><h4>Registration User Level<h4></div>
 		</div>
 		
@@ -18,7 +18,7 @@
 					</li>
 					
 					<li class="dropdown">
-						<a href="<?php echo base_url ()?>index.php/form_station" class="current">Form</a>
+						<a href="<?php echo base_url ()?>index.php/station/add_station" class="current">Form</a>
 						<ul class="dropdown-menu">
 						   <li><a tabindex="-1" href="<?php echo base_url ()?>index.php/station/add_station">Form Station</a></li>
 						   <li><a tabindex="-1" href="<?php echo base_url ()?>index.php/unit/add_unit">Form Unit</a></li>
@@ -29,7 +29,7 @@
 						</ul>
 					</li>
 					<li class="dropdown">
-						<a href="<?php echo base_url ()?>index.php/form_station" class="current">Tabel</a>
+						<a href="<?php echo base_url ()?>index.php/station/tabel_station" class="current">Tabel</a>
 						<ul class="dropdown-menu">
 						   <li><a tabindex="-1" href="<?php echo base_url ()?>index.php/station/tabel_station">Tabel Station</a></li>
 						   <li><a tabindex="-1" href="<?php echo base_url ()?>index.php/unit/tabel_unit">Tabel Unit</a></li>

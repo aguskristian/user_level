@@ -7,7 +7,7 @@
 		function __construct()
     		{
 				parent::__construct();
-				$this->load->helper( array( 'url' ));	
+				$this->load->helper( array( 'url','form' ));	
 				$this->load->model('user_level');
 			}
 				
@@ -36,13 +36,22 @@
 		
 		}
 		
+		
+		function delete($id)
+		{
+			#delete data station berdasarkan id
+			$this->user_level->delete_unit($id);
+			#load view tabel_station
+			redirect('unit/tabel_unit');
+		}
+		
 		function edit($id)
 		{
 			$query = $this->user_level->edit_unit($id);
 					 $data['fvu_code']    = $query ['vu_code'];
 					 $data['fvu_name']    = $query ['vu_name'];
 					 $data['fvu_vs_code'] = $query ['vu_vs_code'];
-		 			 $data['fvu_level']   = $query ['vu_level'];
+					 $data['fvu_level']   = $query ['vu_level'];
 		
 			$this->load->view('unit/edit_unit',$data);
 		}
@@ -58,17 +67,15 @@
 					$data = array(
 					'vu_code'                =>$vu_code,
 					'vu_name'                =>$vu_name,
-					'vu_vs_code'			 =>$vu_vs_level,
-					'vu_level'               =>$vu_station);
+					'vu_vs_code'			 =>$vu_vs_code,
+					'vu_level'               =>$vu_level);
 					
 					$this->db->where('vu_code',$vu_code);
 					$this->db->update('var_unit',$data);
 					
-				 	#script mengarahkan ke tabel_asset
+				 	#script mengarahkan ke tabel unit
 					redirect('unit/tabel_unit');
 		}
-		
-		
 		
 	}
 ?>

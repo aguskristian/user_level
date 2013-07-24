@@ -27,6 +27,7 @@
 			}
 			#menampilkan form inputan station
 			$this->load->view('station/form_station');
+			#redirect('station/tabel_station');
 		}
 		
 		function tabel_station()
@@ -36,6 +37,15 @@
 			#menampilkan tabel station
 			$this->load->view('station/tabel_station',$data);	
 		
+		}
+		
+		function delete($id)
+		{
+			#delete data station berdasarkan id
+			$this->user_level->delete_station($id);
+			#load view tabel_station
+			redirect('station/tabel_station');
+			
 		}
 		
 		function edit($id)

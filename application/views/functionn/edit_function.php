@@ -5,10 +5,7 @@
 			<?php $this->load->view('header');	?>
 			<?php $this->load->view('main_header_function');?>
 			<br></br>
-    		
-		<table width="0" border="0" style="font-size:12px;" align="center" cellpadding="3" >
-			
-			
+    		<?php echo form_open_multipart('functionn/submit'); ?>
 			<?php echo form_hidden('vf_code',$fvf_code); ?>
         
         
@@ -26,8 +23,10 @@
 				<td> <strong><?php echo form_label('Function Level'); ?></strong></td>
 				<td> <?php echo form_input('vf_level',$fvf_level,'id="vf_level" '); ?></td>
 			</tr>
-
-        </table>
+			<br></br>
+			 <tr>
+				<td> <?php echo form_submit('update','Update','id="submit"'); echo form_close(); ?> </td>
+			 </tr>
 		
 			<div class="clear"></div>
 	</div>

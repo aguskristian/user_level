@@ -1,4 +1,4 @@
-<article class="module width_full" style="overflow-x: scroll;">
+<article class="module width_full" style="overflow-y: scroll;">
 		<div class="module_content">
 			<br></br>
 			
@@ -29,13 +29,9 @@
 							
 						<td>
 
-						<a href="<?php echo base_url().'index.php/form_team/edit_team/' . $key->vt_code ?>"><alt="Edit"></a>
-						
-						<a href="<?php echo base_url().'index.php/form_team/delete_team/' . $key->vt_code ?>"><alt="Delete"></a>
-                        
-						<?php #echo anchor('controllersinventory/edit_inventory/' . $key->id_wo_pmi, 'Edit'); ?>
-                        
-						<?php #echo anchor('controllersinventory/delete_inventory/' . $key->id_wo_pmi, 'Delete'); ?>
+						<a href="<?php echo base_url().'index.php/team/edit/' . $key->vt_code ?>">Edit</a>
+						&nbsp;|&nbsp;
+						<a href="<?php echo base_url().'index.php/team/delete/' . $key->vt_code ?>">Delete</a>
 						
 						</td>
                     

@@ -23,11 +23,12 @@
 				<td> <strong><?php echo form_label('Station Level'); ?></strong></td>
 				<td> <?php echo form_input('vs_level',$fvs_level,'id="vs_level" '); ?></td>
 			</tr>
+			<br></br>
 			
-		 <tr>
-       
-         <td> <?php    echo form_submit('update','UPDATE','id="submit"'); echo form_close(); ?> </td>
-        
+		<tr>	
+			
+				<td> <?php echo form_submit('update','UPDATE','id="submit"'); echo form_close(); ?> </td>
+			
 		</tr>
 
        

@@ -6,9 +6,7 @@
 			<?php $this->load->view('main_header_position');?>
 			<br></br>
     		
-		<table width="0" border="0" style="font-size:12px;" align="center" cellpadding="3" >
-			
-			
+			<?php echo form_open_multipart('position/submit'); ?>
 			<?php echo form_hidden('vp_code',$fvp_code); ?>
         
         
@@ -36,8 +34,10 @@
 				<td> <strong><?php echo form_label('Position Level'); ?></strong></td>
 				<td> <?php echo form_input('vp_level',$fvp_level,'id="vp_level" '); ?></td>
 			</tr>
-
-        </table>
+			<br></br>
+			 <tr>
+				<td> <?php echo form_submit('update','Update','id="submit"'); echo form_close(); ?> </td>
+			 </tr>
 		
 			<div class="clear"></div>
 	</div>

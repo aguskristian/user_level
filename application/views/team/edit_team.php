@@ -5,12 +5,9 @@
 			<?php $this->load->view('header');	?>
 			<?php $this->load->view('main_header_team');?>
 			<br></br>
-    		
-		<table width="0" border="0" style="font-size:12px;" align="center" cellpadding="3" >
 			
-			
+			<?php echo form_open_multipart('team/submit'); ?>
 			<?php echo form_hidden('vt_code',$fvt_code); ?>
-        
         
 			<tr>
 				<td> <strong><?php echo form_label('Team Code'); ?></strong></td>
@@ -31,8 +28,10 @@
 				<td> <strong><?php echo form_label('Team Level'); ?></strong></td>
 				<td> <?php echo form_input('vt_level',$fvt_level,'id="vt_level" '); ?></td>
 			</tr>
-
-        </table>
+			<br></br>
+			 <tr>
+				<td> <?php echo form_submit('update','Update','id="submit"'); echo form_close(); ?> </td>
+			 </tr>
 		
 			<div class="clear"></div>
 	</div>
